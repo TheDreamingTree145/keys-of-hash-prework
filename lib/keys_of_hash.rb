@@ -6,7 +6,7 @@ class Hash
       matches = []
       self.map do |key, value|
           args.each do |arg|
-              if values.include?(arg.to_s)
+              if self.values.include?(arg.to_s)
                   matches << key
               end
           end
