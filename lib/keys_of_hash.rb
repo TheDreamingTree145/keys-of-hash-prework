@@ -1,7 +1,18 @@
 require 'pry'
 
 class Hash
-  def keys_of(*args)
-    binding.pry
-  end
+  class Hash
+    def keys_of(*args)
+        matches = []
+        self.map do |key, values|
+            args.each do |arg|
+                if values.include?(arg.to_s)
+                    matches << key
+                end
+            end
+        end
+        matches
+    end
+
+end
 end
