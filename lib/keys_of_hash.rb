@@ -6,8 +6,7 @@ class Hash
       matches = []
         args.each do |arg|
             if values.include?(arg)
-                matches << [arg]
-            end
+                matches << arg
         end
       matches
   end
